@@ -40,19 +40,17 @@ class LoginFragment : Fragment() {
                 val password = etPassword.text.toString()
 
                 if (validateInput(email, password)) {
-                    // Assuming successful authentication here.
+                    // Logika autentikasi berhasil
 
-                    // TODO: Replace these placeholders with actual logic
-                    // that checks user data from your backend/database:
-                    val isFirstLogin = false // Check if user's 'last login' is null, etc.
-                    val hasNewStreak = true  // Check if user unlocked a new streak badge today
+                    // TODO: Ganti placeholder ini dengan logika backend/database nyata
+                    val isFirstLogin = false
+                    val hasNewStreak = true
 
                     if (isFirstLogin || hasNewStreak) {
-                        // RECODE: Navigate to the Streak Fragment
-                        // NOTE: action_login_to_streak must be defined in your navigation graph
+                        // Navigasi ke Streak untuk login pertama atau streak baru
                         findNavController().navigate(R.id.action_login_to_streak)
                     } else {
-                        // Navigate to Home for regular/non-streak logins
+                        // Navigasi ke Home untuk login biasa
                         findNavController().navigate(R.id.action_login_to_home)
                     }
                 }
@@ -73,7 +71,6 @@ class LoginFragment : Fragment() {
             binding.tilPassword.error = "Password is required"
             return false
         }
-        // Basic hardcoded check to show successful login flow
         binding.tilEmail.error = null
         binding.tilPassword.error = null
         return true

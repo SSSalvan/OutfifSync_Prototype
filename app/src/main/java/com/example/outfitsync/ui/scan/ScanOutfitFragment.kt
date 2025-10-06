@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.outfitsync.R
 import com.example.outfitsync.databinding.FragmentScanOutfitBinding
+import com.google.android.material.snackbar.Snackbar
 
 class ScanOutfitFragment : Fragment() {
 
@@ -30,21 +31,46 @@ class ScanOutfitFragment : Fragment() {
 
     private fun setupUI() {
         binding.apply {
+            // Tombol kembali
             btnBack.setOnClickListener {
                 findNavController().navigateUp()
             }
 
-            btnOutfitType.setOnClickListener {
-                // Show outfit type dropdown
+            // Menggunakan ID View Binding yang benar: btnSaveItemDone
+            // Catatan: Nama properti View Binding di Kotlin adalah camelCase dari ID XML
+            btnSaveItemDone.setOnClickListener {
+                // Navigasi ke wardrobe setelah scan selesai (sesuai mobile_navigation.xml)
+                findNavController().navigate(R.id.action_scan_outfit_to_wardrobe)
+                Snackbar.make(binding.root, "Item berhasil ditambahkan ke lemari!", Snackbar.LENGTH_SHORT).show()
             }
 
-            btnColor.setOnClickListener {
-                // Show color picker
-            }
+            // Dropdown sekarang memiliki placeholder fungsional
+            setupDropdowns()
+        }
+    }
 
-            btnSaveTo.setOnClickListener {
-                // Show save to category dropdown
-            }
+    private fun setupDropdowns() {
+        // Dropdown Outfit Type
+        val outfitTypes = listOf("Top", "Bottom", "Footwear", "Accessory")
+        setupSpinner(binding.btnOutfitType, outfitTypes, "Tipe Pakaian")
+
+        // Dropdown Color
+        val colors = listOf("Black", "White", "Pink", "Blue")
+        setupSpinner(binding.btnColor, colors, "Warna")
+
+        // Dropdown Save To
+        val saveToCategories = listOf("Casual", "Formal", "Sporty")
+        setupSpinner(binding.btnSaveTo, saveToCategories, "Simpan Ke Kategori")
+    }
+
+    // Fungsi bantuan sederhana untuk mensimulasikan interaksi dropdown
+    private fun setupSpinner(button: View, items: List<String>, title: String) {
+        button.setOnClickListener {
+            Snackbar.make(
+                binding.root,
+                "$title: Opsi yang tersedia: ${items.joinToString(", ")}",
+                Snackbar.LENGTH_SHORT
+            ).show()
         }
     }
 

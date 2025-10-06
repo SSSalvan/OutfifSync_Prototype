@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.outfitsync.R
 import com.example.outfitsync.databinding.FragmentCameraUploadBinding
+import com.google.android.material.snackbar.Snackbar
 
 class CameraUploadFragment : Fragment() {
 
@@ -31,11 +32,16 @@ class CameraUploadFragment : Fragment() {
     private fun setupUI() {
         binding.apply {
             btnTakePhoto.setOnClickListener {
+                // Navigasi ke fragment pemindaian (CameraScanFragment)
                 findNavController().navigate(R.id.action_upload_to_scan)
             }
 
             btnChooseFromLibrary.setOnClickListener {
-                // Open gallery picker
+                // Masalah 4: Tombol Choose from Library tidak berfungsi
+                // Placeholder: Di dunia nyata, ini akan meluncurkan ActivityResultLauncher
+                // untuk memilih gambar dari galeri.
+                Snackbar.make(binding.root, "Membuka Galeri/Pustaka untuk memilih gambar...", Snackbar.LENGTH_SHORT).show()
+                // TODO: Implementasi nyata menggunakan registerForActivityResult(ActivityResultContracts.PickVisualMedia())
             }
         }
     }

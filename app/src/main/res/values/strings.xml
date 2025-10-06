@@ -189,4 +189,8 @@
 
     <string name="action_sign_in">Sign in</string>
     <string name="action_sign_up">Sign up</string>
+
+    <string name="message_shuffle_prompt">Tekan kocok untuk saran pakaian acak hari ini!</string>
+    <string name="title_outfit_shuffle">OUTFIT SHUFFLE</string>
+    <string name="action_shuffle_now">SHUFFLE SEKARANG</string>
 </resources>

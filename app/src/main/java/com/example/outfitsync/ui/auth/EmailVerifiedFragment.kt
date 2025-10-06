@@ -31,8 +31,7 @@ class EmailVerifiedFragment : Fragment() {
     private fun setupUI() {
         binding.apply {
             btnDone.setOnClickListener {
-                // RECODE: Navigate to the Streak screen for a brand new user
-                // NOTE: action_verified_to_streak must be defined in your navigation graph
+                // RECODE: Navigasi ke Streak untuk pengguna baru (sesuai permintaan)
                 findNavController().navigate(R.id.action_verified_to_streak)
             }
         }
