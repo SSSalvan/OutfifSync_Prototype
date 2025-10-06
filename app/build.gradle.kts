@@ -1,21 +1,18 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt") // Plugin Kapt sudah ditambahkan
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
-    namespace = "com.example.dashboard_outfitsync"
-    compileSdk = 36 // Menggunakan versi SDK yang stabil
+    namespace = "com.example.outfitsync"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.dashboard_outfitsync"
+        applicationId = "com.example.outfitsync"
         minSdk = 24
-        targetSdk = 36 // Target SDK disamakan
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -27,37 +24,46 @@ android {
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8 // Direkomendasikan untuk kompatibilitas
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
-    // buildFeatures compose dihapus karena proyek ini berbasis XML
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
-    // Dependensi Inti
-    implementation(libs.androidx.core.ktx)
+    // Core Android
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.12.0")
+    implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // ViewModel & LiveData
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
-
     // Navigation Component
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
 
-    // Room Database
-    implementation("androidx.room:room-runtime:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
+    // Lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
 
-    // Testing
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    // RecyclerView & CardView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+    // Optional: Image Loading (choose one)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    // OR
+    // implementation("io.coil-kt:coil:2.5.0")
 }

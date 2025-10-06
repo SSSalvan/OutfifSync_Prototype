@@ -3,17 +3,17 @@
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="Home" /> <!-- We will create ic_home below -->
     <item
         android:id="@+id/wardrobeFragment"
-        android:icon="@drawable/ic_wardrobe"
-        android:title="Wardrobe" />
+        android:icon="@drawable/ic_navigation_hanger"
+        android:title="Wardrobe" /> <!-- Changed from ic_wardrobe -->
     <item
         android:id="@+id/calendarFragment"
-        android:icon="@drawable/ic_calendar"
-        android:title="Calendar" />
+        android:icon="@drawable/ic_navigation_calendar"
+        android:title="Calendar" /> <!-- Changed from ic_calendar -->
     <item
         android:id="@+id/profileFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="Profile" />
+        android:icon="@drawable/ic_navigation_user"
+        android:title="Profile" /> <!-- Changed from ic_profile -->
 </menu>
