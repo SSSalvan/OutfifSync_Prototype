@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_rounded_corners_white"
+    android:padding="8dp"
+    android:elevation="8dp">
+
+    <!-- Header Button -->
+    <Button
+        android:id="@+id/btnSaveToHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/save_to"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textColor="#171717"
+        app:icon="@drawable/ic_dropdown_arrow"
+        app:iconTint="#171717"
+        app:iconGravity="end"
+        android:paddingHorizontal="12dp"
+        app:cornerRadius="8dp"
+        app:backgroundTint="@android:color/white"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Grid of Category Buttons -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:rowCount="4"
+        android:orientation="horizontal"
+        android:layout_gravity="start">
+
+        <!-- Top Row -->
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_top"
+            android:backgroundTint="#FFD1D2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_top"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_top"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_top"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_top"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_top"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Second Row -->
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_bottom"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_bottom"
+            android:backgroundTint="#FFD1D2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_bottom"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_bottom"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_matters"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_custom"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Third Row -->
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_footwear"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_footwear"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_footwear"
+            android:backgroundTint="#FFD1D2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_bag"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_footwear"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_footwear"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Fourth Row -->
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_bag"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_accessories"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_accessories"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_accessories"
+            android:backgroundTint="#FFD1D2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_accessories"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button style="@style/DropdownCategoryButton"
+            android:text="@string/category_bag"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </GridLayout>
+
+    <!-- Side Menu Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_rounded_corners_white_small"
+        android:layout_marginTop="16dp"
+        android:padding="4dp"
+        android:elevation="4dp">
+
+        <Button
+            style="@style/DropdownSideMenuButton"
+            android:text="@string/category_top"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+        <Button
+            style="@style/DropdownSideMenuButton"
+            android:text="@string/category_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+        <Button
+            style="@style/DropdownSideMenuButton"
+            android:text="@string/category_footwear"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+        <Button
+            style="@style/DropdownSideMenuButton"
+            android:text="@string/category_bag"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+        <Button
+            style="@style/DropdownSideMenuButton"
+            android:text="@string/category_accessories"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+</LinearLayout>

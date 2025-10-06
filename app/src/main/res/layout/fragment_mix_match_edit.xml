@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F6F2"
+    tools:context=".ui.mixmatch.MixMatchEditFragment">
+
+    <ImageButton
+        android:id="@+id/btnUndo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/action_undo"
+        android:src="@drawable/ic_undo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#171717" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomActionContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"
+        android:paddingHorizontal="16dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:alignmentMode="alignBounds"
+            android:columnOrderPreserved="false"
+            android:useDefaultMargins="true"
+            android:paddingBottom="16dp"
+            android:gravity="center_horizontal">
+
+            <ImageView style="@style/GridItemSmall" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_bow_tie" />
+            <ImageView style="@style/GridItemMain" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_cap" />
+            <ImageView style="@style/GridItemSmall" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_glasses" />
+
+            <ImageView style="@style/GridItemMain" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_skirt" android:layout_marginTop="-24dp"/>
+            <ImageView style="@style/GridItemMain" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_main_top" android:layout_marginTop="-24dp"/>
+            <ImageView style="@style/GridItemMain" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_vest" android:layout_marginTop="-24dp"/>
+
+            <ImageView style="@style/GridItemSmall" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_grey_pants_alt" />
+            <ImageView style="@style/GridItemMain" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_jeans_main" android:layout_marginTop="-40dp"/>
+            <ImageView style="@style/GridItemMain" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_grey_pants_main" android:layout_marginTop="-40dp"/>
+
+            <ImageView style="@style/GridItemSmall" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_heels" />
+            <ImageView style="@style/GridItemMain" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_sneakers_main" />
+            <ImageView style="@style/GridItemSmall" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_sneakers_alt" />
+
+            <ImageView style="@style/GridItemSmall" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_bag_small" />
+            <ImageView style="@style/GridItemMain" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_bag_main" />
+            <ImageView style="@style/GridItemSmall" tools:src="@tools:sample/avatars" android:contentDescription="@string/item_bag_alt" />
+
+        </GridLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomActionContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/action_next"
+            android:textColor="#171717"
+            app:backgroundTint="#FFD1D2"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnMagicWand" />
+
+        <ImageButton
+            android:id="@+id/btnMagicWand"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/action_magic_match"
+            android:src="@drawable/ic_magic_wand"
+            app:layout_constraintBottom_toBottomOf="@id/btnNext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnNext"
+            app:tint="#171717" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

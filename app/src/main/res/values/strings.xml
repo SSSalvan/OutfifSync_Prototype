@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <string name="app_name">OUTFITSYNC</string>
+
+    <!-- Common actions -->
+    <string name="action_save">Save</string>
+    <string name="action_done">Done</string>
+    <string name="action_close">Close</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_take_a_photo">Take a photo</string>
+    <string name="action_choose_from_library">Choose from library</string>
+    <string name="action_signin">Sign in</string>
+    <string name="action_signin_google">Sign in with Google</string>
+    <string name="action_signup">Sign up</string>
+    <string name="action_resend_code">Resend Code</string>
+    <string name="action_save_to_calendar">Save to calendar</string>
+
+    <!-- Labels -->
+    <string name="label_successfully">Successfully</string>
+    <string name="label_or">Or</string>
+    <string name="label_save_to">Save to</string>
+    <string name="label_events">Events</string>
+    <string name="label_time">Time</string>
+    <string name="label_location">Location</string>
+    <string name="label_select_date">Select a date</string>
+
+    <!-- Content descriptions (accessibility) -->
+    <string name="cd_calendar">Calendar</string>
+    <string name="cd_hanger">Wardrobe</string>
+    <string name="cd_add_new">Add New Item</string>
+    <string name="cd_shuffle">Mix &amp; Match</string>
+    <string name="cd_user">User Profile</string>
+    <string name="cd_back_button">Back</string>
+    <string name="cd_app_logo">OutfitSync Logo</string>
+    <string name="cd_profile_picture">Profile Picture</string>
+    <string name="cd_profile_image">Profile Image</string>
+    <string name="cd_success_checkmark">Success checkmark</string>
+    <string name="cd_add_image_icon">Add image icon</string>
+    <string name="cd_area_for_camera_scan">Area for camera scan</string>
+    <string name="cd_capture_photo">Capture Photo</string>
+    <string name="cd_top_pick_item">Top pick item</string>
+    <string name="cd_recent_item">Recent item</string>
+
+    <!-- Titles -->
+    <string name="title_create_account">Create Account</string>
+    <string name="title_login">Login</string>
+    <string name="title_email_verified">Email Verified</string>
+    <string name="title_verify_email">Verify Your Email</string>
+    <string name="title_categories">Categories</string>
+    <string name="title_top_picks">Your Top Picks</string>
+    <string name="title_recently_added">Recently Added Items</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_favorites">Favorites</string>
+
+    <!-- Prompts and messages -->
+    <string name="message_email_verified">Your email has been verified</string>
+    <string name="message_verification_sent">A verification code has been sent to\n%1$s</string>
+    <string name="prompt_have_account">Already have an account? </string>
+    <string name="prompt_no_account">Don’t have an account? </string>
+    <string name="prompt_didnt_receive_email">Didn’t receive an email?</string>
+
+    <!-- Hints -->
+    <string name="hint_email_phone">Email or phone</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_birth_date">Birth Date</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_add_location">Add location</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Hello, %1$s!</string>
+    <string name="home_subgreeting">What style are you feeling today?</string>
+
+    <!-- Upload / Outfit -->
+    <string name="upload_your_new_outfit">Upload your new outfit</string>
+    <string name="scan_your_outfit_here">Scan your outfit here!</string>
+
+    <!-- Categories -->
+    <string name="category_top">Top</string>
+    <string name="category_bottom">Bottom</string>
+    <string name="category_footwear">Footwear</string>
+    <string name="category_bag">Bag</string>
+    <string name="category_accessories">Accessories</string>
+    <string name="category_casual">Casual</string>
+    <string name="category_formal">Formal</string>
+    <string name="category_sporty">Sporty</string>
+    <string name="category_matters">Matters</string>
+    <string name="category_custom">Custom</string>
+
+    <string-array name="clothing_categories">
+        <item>@string/category_top</item>
+        <item>@string/category_bottom</item>
+        <item>@string/category_footwear</item>
+        <item>@string/category_bag</item>
+        <item>@string/category_accessories</item>
+    </string-array>
+
+    <!-- Calendar -->
+    <string name="day_sun_abbr">S</string>
+    <string name="day_mon_abbr">M</string>
+    <string name="day_tue_abbr">T</string>
+    <string name="day_wed_abbr">W</string>
+    <string name="day_thu_abbr">T</string>
+    <string name="day_fri_abbr">F</string>
+    <string name="day_sat_abbr">S</string>
+
+    <!-- Accessibility for daily outfit view -->
+    <string name="content_desc_prev_month">Previous month</string>
+    <string name="content_desc_next_month">Next month</string>
+    <string name="content_desc_date_selector_day">Select a day</string>
+    <string name="content_desc_like_outfit">Like this outfit</string>
+    <string name="content_desc_time_morning">Morning</string>
+    <string name="content_desc_weather_cloud">Weather: Cloudy</string>
+    <string name="content_desc_time_afternoon">Afternoon</string>
+    <string name="content_desc_time_evening">Evening</string>
+
+    <string name="save_to">Save to</string>
+    <string name="label_calendar">Calendar</string>
+    <string name="content_desc_select_month">Select month</string>
+    <string name="content_desc_weather_icon">Weather icon</string>
+
+    <!-- Placeholders -->
+    <string name="placeholder_date_today">Today</string>
+    <string name="placeholder_temp">25°C</string>
+    <string name="placeholder_date_tomorrow">Tomorrow</string>
+    <string name="placeholder_temp_2">27°C</string>
+
+    <string name="scan_completed">Scan completed!</string>
+    <string name="cd_scanned_outfit">Scanned outfit image</string>
+    <string name="label_outfit_type">Outfit Type</string>
+    <string name="label_color">Color</string>
+
+    <string name="cd_help_button">Help</string>
+    <string name="action_edit_profile">Edit Profile</string>
+    <string name="label_gender">Gender:</string>
+    <string name="label_birth_date">Birth Date:</string>
+    <string name="label_email">Email:</string>
+    <string name="label_phone_number">Phone Number:</string>
+    <string name="label_theme">Theme:</string>
+
+    <string name="placeholder_user_name">Clarissa Waldorf</string>
+    <string name="placeholder_location">Jakarta</string>
+    <string name="placeholder_gender">Female</string>
+    <string name="placeholder_birth_date">22/02/2005</string>
+    <string name="placeholder_email">clarissaishere@gmail.com</string>
+    <string name="placeholder_phone">+62-888-2222</string>
+    <string name="placeholder_theme">Pink</string>
+
+    <string name="cd_favorites">Favorites</string>
+    <string name="category_top">Top</string>
+    <string name="category_bottom">Bottom</string>
+    <string name="category_footwear">Footwear</string>
+    <string name="category_bags">Bags</string>
+    <string name="category_accessories">Accessories</string>
+
+    <string name="message_verification_sent">A verification code has been sent to\n%1$s</string>
+
+    <string name="streak_header">Keep Slaying Fashionista!</string>
+    <string name="streak_subheader">You're ending the week again in full fashion.</string>
+    <string name="streak_duration">6 DAY STREAK!</string>
+    <string name="cd_streak_flame_visual">Streak flame visual</string>
+
+    <string name="hint_otp_digit_1">Digit 1</string>
+    <string name="hint_otp_digit_2">Digit 2</string>
+    <string name="hint_otp_digit_3">Digit 3</string>
+    <string name="hint_otp_digit_4">Digit 4</string>
+    <string name="hint_otp_digit_5">Digit 5</string>
+    <string name="hint_otp_digit_6">Digit 6</string>
+
+    <string name="placeholder_day_date">9</string>
+    <string name="placeholder_selected_date">14</string>
+    <string name="placeholder_outfit_item_name">Basic Top</string>
+    <string name="cd_color_indicator">Color indicator</string>
+    <string name="cd_mix_match_accessory">Accessory item</string>
+
+    <string name="cd_like_item">Like item</string>
+    <string name="cd_clothing_image">Clothing item image</string>
+    <string name="placeholder_category_casual">Casual</string>
+</resources>

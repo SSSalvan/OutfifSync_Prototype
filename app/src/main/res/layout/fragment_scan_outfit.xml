@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F6F2"
+    tools:context=".ui.scan.ScanOutfitFragment">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/cd_back_button"
+        android:src="@drawable/ic_navigation_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#171717"
+        tools:src="@drawable/ic_navigation_back" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/title_pink"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="75dp">
+
+            <TextView
+                android:id="@+id/tvScanStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#171717"
+                android:text="@string/scan_completed"
+                android:layout_marginBottom="24dp" />
+
+            <ImageView
+                android:id="@+id/scannedImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/image_border"
+                android:contentDescription="@string/cd_scanned_outfit"
+                tools:src="@tools:sample/avatars"
+                android:layout_marginBottom="32dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOutfitType"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/label_outfit_type"
+                android:textAlignment="viewStart"
+                android:textColor="#171717"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_dropdown_arrow"
+                app:iconTint="#171717"
+                app:iconGravity="end"
+                app:backgroundTint="#FFD1D2"
+                app:strokeWidth="0dp"
+                app:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnColor"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/label_color"
+                android:textAlignment="viewStart"
+                android:textColor="#171717"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_dropdown_arrow"
+                app:iconTint="#171717"
+                app:iconGravity="end"
+                app:backgroundTint="#FFD1D2"
+                app:strokeWidth="0dp"
+                app:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveTo"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/label_save_to"
+                android:textAlignment="viewStart"
+                android:textColor="#171717"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_dropdown_arrow"
+                app:iconTint="#171717"
+                app:iconGravity="end"
+                app:backgroundTint="#FFD1D2"
+                app:strokeWidth="0dp"
+                app:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:paddingStart="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/action_done"
+                android:textColor="#D84F66"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

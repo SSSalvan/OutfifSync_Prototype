@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.calendar.CalendarDailyViewFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/daySelectorScroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/daySelectorContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout style="@style/DaySelectorBase" android:layout_marginEnd="8dp" android:contentDescription="@string/content_desc_date_selector_day">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="14sp" tools:text="Mon"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="18sp" android:textStyle="bold" tools:text="9"/>
+            </LinearLayout>
+            <LinearLayout style="@style/DaySelectorBase" android:layout_marginEnd="8dp" android:contentDescription="@string/content_desc_date_selector_day">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="14sp" tools:text="Tue"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="18sp" android:textStyle="bold" tools:text="10"/>
+            </LinearLayout>
+            <LinearLayout style="@style/DaySelectorBase" android:layout_marginEnd="8dp" android:contentDescription="@string/content_desc_date_selector_day">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="14sp" tools:text="Wed"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="18sp" android:textStyle="bold" tools:text="11"/>
+            </LinearLayout>
+            <LinearLayout style="@style/DaySelectorBase" android:layout_marginEnd="8dp" android:contentDescription="@string/content_desc_date_selector_day">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="14sp" tools:text="Thu"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="18sp" android:textStyle="bold" tools:text="12"/>
+            </LinearLayout>
+            <LinearLayout style="@style/DaySelectorBase" android:layout_marginEnd="8dp" android:contentDescription="@string/content_desc_date_selector_day">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="14sp" tools:text="Fri"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="18sp" android:textStyle="bold" tools:text="13"/>
+            </LinearLayout>
+            <LinearLayout style="@style/DaySelectorSelected" android:layout_marginEnd="8dp" android:contentDescription="@string/content_desc_date_selector_day">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorPrimary" android:textSize="14sp" tools:text="Sat"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorPrimary" android:textSize="18sp" android:textStyle="bold" tools:text="14"/>
+            </LinearLayout>
+            <LinearLayout style="@style/DaySelectorBase" android:contentDescription="@string/content_desc_date_selector_day">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="14sp" tools:text="Sun"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorOnBackground" android:textSize="18sp" android:textStyle="bold" tools:text="15"/>
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tvDailyDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Saturday, 14 February 2025" android:textColor="@color/colorOnBackground"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@id/daySelectorScroll"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/outfitScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDailyDateLabel"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="85dp">
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_heart_outline"
+                app:tint="@color/colorPrimary"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/content_desc_like_outfit"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"/>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:useDefaultMargins="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-40dp"
+                android:layout_marginBottom="24dp">
+
+                <ImageView style="@style/GridItemMainLarge" tools:src="@tools:sample/avatars" android:contentDescription="@string/category_top" android:layout_marginBottom="8dp"/>
+                <ImageView style="@style/GridItemMainLarge" tools:src="@tools:sample/avatars" android:contentDescription="@string/category_accessories" android:layout_marginBottom="8dp"/>
+                <ImageView style="@style/GridItemMainLarge" tools:src="@tools:sample/avatars" android:contentDescription="@string/category_bottom" android:layout_marginBottom="8dp"/>
+                <ImageView style="@style/GridItemMainLarge" tools:src="@tools:sample/avatars" android:contentDescription="@string/category_accessories" android:layout_marginBottom="8dp"/>
+                <ImageView style="@style/GridItemMainLarge" tools:src="@tools:sample/avatars" android:contentDescription="@string/category_footwear" android:layout_marginBottom="8dp"/>
+                <ImageView style="@style/GridItemMainLarge" tools:src="@tools:sample/avatars" android:contentDescription="@string/category_bag" android:layout_marginBottom="8dp"/>
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <ImageButton style="@style/TimeSelectorIcon" android:src="@drawable/ic_time_morning" app:tint="@color/colorOnBackground" android:contentDescription="@string/content_desc_time_morning"/>
+                <ImageButton style="@style/TimeSelectorIcon" android:src="@drawable/ic_weather_cloud" app:tint="@color/colorPrimary" android:contentDescription="@string/content_desc_weather_cloud"/>
+                <ImageButton style="@style/TimeSelectorIcon" android:src="@drawable/ic_time_afternoon" app:tint="@color/colorOnBackground" android:contentDescription="@string/content_desc_time_afternoon"/>
+                <ImageButton style="@style/TimeSelectorIcon" android:src="@drawable/ic_time_evening" app:tint="@color/colorOnBackground" android:contentDescription="@string/content_desc_time_evening"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Valentine's Day Dinner" android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

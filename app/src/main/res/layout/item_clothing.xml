@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        app:layout_constraintDimensionRatio="1:1.2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/clothingImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/cd_clothing_image"
+            tools:src="@tools:sample/avatars"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/btnItemLike"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:padding="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_heart_filled"
+        app:tint="#D84F66"
+        android:contentDescription="@string/cd_like_item"
+        app:layout_constraintTop_toTopOf="@id/cardImage"
+        app:layout_constraintEnd_toEndOf="@id/cardImage" />
+
+
+    <TextView
+        android:id="@+id/clothingCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/placeholder_category_casual"
+        android:textColor="@color/text_dark_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardImage"
+        tools:text="Casual"/>
+
+    <View
+        android:id="@+id/colorDot"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/circle_dot_brown"
+        app:layout_constraintStart_toEndOf="@id/clothingCategory"
+        app:layout_constraintTop_toTopOf="@id/clothingCategory"
+        app:layout_constraintBottom_toBottomOf="@id/clothingCategory"
+        tools:background="#D2B48C"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

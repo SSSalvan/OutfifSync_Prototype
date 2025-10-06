@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <View
+        android:id="@+id/navBorder"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBorder"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnNavCalendar"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/cd_calendar"
+            android:src="@drawable/ic_navigation_calendar"
+            app:tint="@color/colorOnBackgroundVariant" />
+
+        <ImageButton
+            android:id="@+id/btnNavHanger"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/cd_hanger"
+            android:src="@drawable/ic_navigation_hanger"
+            app:tint="@color/colorOnBackgroundVariant" />
+
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="12dp"
+            android:background="@drawable/circle_button_bg"
+            android:contentDescription="@string/cd_add_new"
+            android:elevation="4dp"
+            android:src="@drawable/ic_navigation_add"
+            app:tint="@color/colorOnPrimary" />
+
+        <ImageButton
+            android:id="@+id/btnNavShuffle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/cd_shuffle"
+            android:src="@drawable/ic_navigation_shuffle"
+            app:tint="@color/colorOnBackgroundVariant" />
+
+        <ImageButton
+            android:id="@+id/btnUser"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/cd_user"
+            android:src="@drawable/ic_navigation_user"
+            app:tint="@color/colorOnBackgroundVariant" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
